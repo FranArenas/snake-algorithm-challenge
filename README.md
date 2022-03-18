@@ -9,4 +9,5 @@ If the efficiency of the algorithm were a must, the calculations of the body dis
 
 ## Requirements
 Python 3.10.2
+
 Pytest==7.1.0. I used pytest instead of unittest because it is less verbose, more readable and faster
