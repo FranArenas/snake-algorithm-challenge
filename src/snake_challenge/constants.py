@@ -13,7 +13,7 @@ MIN_DEPTH = 1
 MAX_DEPTH = 20
 
 
-class SnakeMovement(enum.Enum):
+class SnakeMovementDirection(enum.Enum):
     """
     Possible movements of a snake
     """
