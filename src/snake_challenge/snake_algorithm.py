@@ -89,7 +89,7 @@ def _check_input(snake: Snake,
         raise ValueError(f"Snake len should be > {SNAKE_MIN_LENGTH} and < {SNAKE_MAX_LENGTH}")
     if _snake_is_out_of_board(snake, board):
         raise ValueError(f"The snake can't be outside the board!")
-    if not _snake_body_parts_are_two_dimensional(snake):
+    if not _are_snake_body_parts_two_dimensional(snake):
         raise ValueError("Snake body parts should be two-dimensional!")
 
     # board
@@ -122,7 +122,7 @@ def _snake_is_out_of_board(snake: Snake,
     return False
 
 
-def _snake_body_parts_are_two_dimensional(snake: Snake) -> bool:
+def _are_snake_body_parts_two_dimensional(snake: Snake) -> bool:
     """
     Checks if all the body parts of the snake are two-dimensional
     Args:
