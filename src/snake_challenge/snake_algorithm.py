@@ -87,7 +87,7 @@ def _check_input(snake: Snake,
     # snake
     if SNAKE_MIN_LENGTH > len(snake) or SNAKE_MAX_LENGTH < len(snake):
         raise ValueError(f"Snake len should be > {SNAKE_MIN_LENGTH} and < {SNAKE_MAX_LENGTH}")
-    if _snake_is_out_of_board(snake, board):
+    if _is_snake_out_of_board(snake, board):
         raise ValueError(f"The snake can't be outside the board!")
     if not _are_snake_body_parts_two_dimensional(snake):
         raise ValueError("Snake body parts should be two-dimensional!")
@@ -102,7 +102,7 @@ def _check_input(snake: Snake,
         raise ValueError(f"Depth should be < {MIN_DEPTH} and > {MAX_DEPTH}")
 
 
-def _snake_is_out_of_board(snake: Snake,
+def _is_snake_out_of_board(snake: Snake,
                            board: Board) -> bool:
     """
     Checks if the snake is out of the board
@@ -190,7 +190,7 @@ def _is_valid_snake(snake: Snake,
         True if the new snake is in a valid position, otherwise else.
 
     """
-    if _snake_is_out_of_board(snake, board) or _is_head_colliding(snake):
+    if _is_snake_out_of_board(snake, board) or _is_head_colliding(snake):
         return False
     else:
         return True
